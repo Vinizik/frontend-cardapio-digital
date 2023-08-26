@@ -1,0 +1,147 @@
+/* Estilos para dispositivos maiores (desktop) */
+
+input,
+label {
+  display: block;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-overlay .modal-body {
+  background-image: url(/src/assets/437960.jpg);
+  padding: 24px;
+  height: 60%;
+  width: 60%;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal-overlay .modal-body h2 {
+  font-size: 40px;
+  color: #b8b8b8;
+  margin-bottom: 3rem;
+}
+
+.modal-overlay .modal-body .input-container {
+  width: calc(100% - 24px);
+}
+
+.modal-overlay .modal-body input {
+  padding: 12px;
+  border: 2px solid #c6c5c5c5;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 12px;
+  width: 80%;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  margin-left: 6rem;
+}
+
+.modal-overlay .modal-body label {
+  color: #b8b8b8;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 18px;
+  margin-left: 6rem;
+}
+
+.modal-overlay .modal-body .btn-secondary {
+  position: initial;
+  width: 100%;
+  height: 50px;
+  border-radius: 12px;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.modal-overlay .modal-body .btn-secondary:hover {
+  background-color: #3a44f8;
+  transform: scale(1);
+}
+
+.modal-overlay .btn-close {
+  position: initial;
+  width: 5%;
+  height: 40px;
+  border-radius: 12px;
+  font-size: 20px;
+  margin-left: 95%;
+}
+
+/* Estilos para tablets */
+
+@media (max-width: 768px) {
+  .modal-overlay .modal-body {
+    height: 80%;
+    width: 80%;
+    padding: 16px;
+  }
+
+  .modal-overlay .modal-body h2 {
+    font-size: 30px;
+    margin-bottom: 2rem;
+  }
+
+  .modal-overlay .modal-body input,
+  .modal-overlay .modal-body label {
+    margin-left: 0;
+  }
+
+  .modal-overlay .modal-body .btn-secondary {
+    margin-top: 20px;
+  }
+}
+
+/* Estilos para celulares */
+
+@media (max-width: 480px) {
+  .modal-overlay .modal-body {
+    height: 90%;
+    width: 90%;
+    padding: 12px;
+  }
+
+  .modal-overlay .modal-body h2 {
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+  }
+
+  .modal-overlay .modal-body input {
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  .modal-overlay .modal-body label {
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  .modal-overlay .modal-body .btn-secondary {
+    height: 40px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .modal-overlay .btn-close {
+    width: 10%;
+    height: 30px;
+    font-size: 16px;
+    margin-left: 90%;
+  }
+}
